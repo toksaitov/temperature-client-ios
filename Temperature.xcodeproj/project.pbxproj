@@ -12,6 +12,7 @@
 		421C59C31F0110CC0085A5B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421C59C11F0110CC0085A5B9 /* Main.storyboard */; };
 		421C59C51F0110CC0085A5B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 421C59C41F0110CC0085A5B9 /* Assets.xcassets */; };
 		421C59C81F0110CC0085A5B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421C59C61F0110CC0085A5B9 /* LaunchScreen.storyboard */; };
+		421C59D11F01B56C0085A5B9 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421C59D01F01B56C0085A5B9 /* ChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		421C59C41F0110CC0085A5B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		421C59C71F0110CC0085A5B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		421C59C91F0110CC0085A5B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		421C59D01F01B56C0085A5B9 /* ChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +58,21 @@
 			children = (
 				421C59BD1F0110CC0085A5B9 /* AppDelegate.swift */,
 				421C59BF1F0110CC0085A5B9 /* ViewController.swift */,
+				421C59D01F01B56C0085A5B9 /* ChartView.swift */,
 				421C59C11F0110CC0085A5B9 /* Main.storyboard */,
+				421C59CF1F0117880085A5B9 /* Supporting Files */,
+			);
+			path = Temperature;
+			sourceTree = "<group>";
+		};
+		421C59CF1F0117880085A5B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				421C59C41F0110CC0085A5B9 /* Assets.xcassets */,
 				421C59C61F0110CC0085A5B9 /* LaunchScreen.storyboard */,
 				421C59C91F0110CC0085A5B9 /* Info.plist */,
 			);
-			path = Temperature;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				421C59C01F0110CC0085A5B9 /* ViewController.swift in Sources */,
 				421C59BE1F0110CC0085A5B9 /* AppDelegate.swift in Sources */,
+				421C59D11F01B56C0085A5B9 /* ChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
