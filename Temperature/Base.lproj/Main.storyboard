@@ -24,22 +24,28 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="doG-pz-yjZ">
                                 <rect key="frame" x="129.66666666666669" y="312" width="155.00000000000006" height="112.33333333333331"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-- °C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fd7-v9-V4j">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-- °C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fd7-v9-V4j">
                                         <rect key="frame" x="0.0" y="0.0" width="155.00000000000003" height="86"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="72"/>
                                         <color key="textColor" red="0.0" green="0.4823529411764706" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="144"/>
+                                        </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="humidity at --%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihv-LZ-BcL">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="humidity at --%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ihv-LZ-BcL">
                                         <rect key="frame" x="0.0" y="86" width="155.00000000000003" height="26.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
                                         <color key="textColor" red="0.52544487847222221" green="0.79288023841693001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="44"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HnX-3s-cXs" customClass="ChartView" customModule="Temperature" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="434.33333333333326" width="414" height="301.66666666666674"/>
+                                <rect key="frame" x="0.0" y="444.33333333333326" width="414" height="291.66666666666674"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -49,7 +55,7 @@
                             <constraint firstAttribute="trailing" secondItem="HnX-3s-cXs" secondAttribute="trailing" id="Cy0-UE-bdY"/>
                             <constraint firstItem="HnX-3s-cXs" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="GUS-E0-Mr1"/>
                             <constraint firstItem="HnX-3s-cXs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jp9-fh-YFk"/>
-                            <constraint firstItem="HnX-3s-cXs" firstAttribute="top" secondItem="doG-pz-yjZ" secondAttribute="bottom" constant="10" id="WXS-9I-opB"/>
+                            <constraint firstItem="HnX-3s-cXs" firstAttribute="top" secondItem="doG-pz-yjZ" secondAttribute="bottom" constant="20" id="WXS-9I-opB"/>
                             <constraint firstItem="doG-pz-yjZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mYR-FK-uj9"/>
                             <constraint firstItem="doG-pz-yjZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xBk-1R-jw9"/>
                         </constraints>

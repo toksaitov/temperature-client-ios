@@ -1,7 +1,7 @@
 temperature-client-ios
 ======================
 
-![Sample](http://i.imgur.com/rUioOvR.png)
+![Sample](http://i.imgur.com/Yst9JbZ.png)
 
 _temperature-client-ios_ is a monitoring application for the iOS platform for
 the _temperature_ measurement collection system.

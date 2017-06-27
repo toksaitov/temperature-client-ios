@@ -27,8 +27,12 @@ class ViewController: UIViewController {
     }
 
     private func startTimer() {
-        timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { _ in
-            self.loadData()
+        if #available(iOS 10.0, *) {
+            timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { _ in
+                self.loadData()
+            }
+        } else {
+            timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.loadData), userInfo: nil, repeats: true)
         }
     }
 
@@ -36,7 +40,7 @@ class ViewController: UIViewController {
         timer?.invalidate()
     }
 
-    private func loadData() {
+    @objc private func loadData() {
         let url = URL(string: "http://temperature.auca.space/measurements?limit=100")
         URLSession.shared.dataTask(with: url!) { data, response, error in
             guard error == nil else {
@@ -63,8 +67,17 @@ class ViewController: UIViewController {
             }
 
             DispatchQueue.main.async {
-                self.temperatureLabel.text = "\(components[1]) °C"
-                self.humidityLabel.text = "humidity at \(components[2])%"
+                guard let temperature = Float(components[1]) else {
+                    NSLog("Temperature is not a number")
+                    return
+                }
+                guard let humidity = Float(components[2]) else {
+                    NSLog("Humidity is not a number")
+                    return
+                }
+
+                self.temperatureLabel.text = "\(String(format: "%.1f", temperature)) °C"
+                self.humidityLabel.text = "humidity at \(String(format: "%.1f", humidity))%"
             }
 
             var points = [Double]()
@@ -79,7 +92,7 @@ class ViewController: UIViewController {
                     NSLog("The data has invalid format")
                     return
                 }
-                guard let temperature = Double(components[2]) else {
+                guard let temperature = Double(components[1]) else {
                     NSLog("Failed to parse the temperature data")
                     return
                 }
@@ -92,8 +105,8 @@ class ViewController: UIViewController {
                 return
             }
 
-            let minimum = 0.0
-            let maximum = 20.0
+            let minimum = -10.0
+            let maximum = 40.0
             let difference = maximum - minimum
 
             points = points.map { point -> Double in
